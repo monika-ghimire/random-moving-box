@@ -3,7 +3,7 @@
 let boxList = [];
 
 //for new and diffrent object
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i < 100; i++) {
     let random_color = getRandomColor();
      random_x = Math.floor(Math.random() * canvas.width);
     let random_y = Math.floor(Math.random() * canvas.height);
@@ -31,9 +31,9 @@ function gameLoop() {
         boxList[i].move();
         
        
-        if(boxList[i].X>canvas.width)
+        if(boxList[i].X>canvas.width||boxList[i].X<0)
         {
-            boxList[i].X =0
+            boxList[i].random_speed =-boxList[i].random_speed
            
         
         }
